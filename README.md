@@ -70,6 +70,13 @@ https://github.com/GauriGupta02/medication.git
 ```
 
 🙌 **HAPPY CODING**
+\n
+## 📸 Screenshots
+<img src="https://github.com/GauriGupta02/medication/blob/main/Med.png"/>\n
+<img src="https://github.com/GauriGupta02/medication/blob/main/24hr.png"/>
+INDEX PAGE
+<img src="https://github.com/GauriGupta02/medication/blob/main/INDEXPAGE.png"/>\n
+
 
 
 

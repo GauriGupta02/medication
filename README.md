@@ -37,10 +37,11 @@ A smart web-based application that helps users manage and remember their medicat
 
 **Setup Frontend**
 ```bash
-cd frontend
-npm install
-npm run dev
+Download Live server
 ```
+**Setup Backend**
+install  python
+
 
 ## 📬 Future Enhancements
 

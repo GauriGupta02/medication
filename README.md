@@ -1,4 +1,4 @@
-## Hello, Young Guns 👋 Welcome To my Repo.
+## Hello, Young Guns 👋 Welcome To This Repo.
 
 # 💊 Medication Reminder System
 
@@ -63,7 +63,10 @@ npm run dev
   - [FastAPI](https://fastapi.tiangolo.com/)
 ### Clone the Repository
 
-
+```
+bash
+https://github.com/GauriGupta02/medication.git
+```
 
 
 

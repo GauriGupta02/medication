@@ -1,96 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medicine Reminder</title>
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-        .hero-bg {
-            background-image: url('https://medisafe.com/wp-content/uploads/2021/12/home-hero-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .hero-content {
-            top: 38%;
-            left: 40px;
-            font-size: 3rem;
-            font-weight: bold;
-            color: white;
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/Project/static/style.css ">
 </head>
+<body>
+    <h1>💊 Set a Medicine Reminder 💊</h1>
+    <form method="POST">
+        <input type="text" name="med_name" placeholder="Medicine Name" required><br><br>
+        <input type="time" name="med_time" required><br><br>
+        <input type="email" name="email" placeholder="Your Email" required><br><br>
+        <button type="submit">Set Reminder</button>
+    </form>
 
-<body class="font-sans bg-gray-100">
-
-    <!-- Navbar -->
-    <div class="flex justify-between items-center bg-black text-white px-6 py-2 mt-4 mb-2 sticky top-0 z-50">
-        <div class="text-xl font-semibold">📍 Gwalior, 474001</div>
-        <div class="bg-[#0cb8b6] text-black px-6 py-2 rounded-md font-bold text-lg">
-            Welcome To A Health Care Website - We Always Care For You
-        </div>
-        <div class="text-sm font-semibold">📞 +91-9713-XXXX</div>
-    </div>
-
-    <!-- Hero Section -->
-    <div class="relative hero-bg h-[800px]">
-        <img src="https://medisafe.com/wp-content/uploads/2021/12/home-hero-bg.jpg"
-            class="absolute w-full h-full object-cover" alt="Background">
-        <div class="hero-content absolute top-[38%] left-[40px] text-5xl font-bold z-20">
-            Trusted Care for a Healthier Tomorrow.
-        </div>
-        <div class="hero-text absolute top-[48%] left-[70px] text-lg z-20">
-            "Remembering to take medications isn’t easy as we grow older.<br />
-            But we deliver the best solution to help you stay on track with your medication.<br />
-            Stay healthy, stay reminded!"
-        </div>
-    </div>
-
-    <!-- Medicine Reminder Form -->
-    <div class="max-w-md mx-auto mt-12 p-6 bg-white shadow-lg rounded-lg">
-        <h1 class="text-3xl font-semibold text-center mb-6">💊 Set a Medicine Reminder</h1>
-        <form method="POST" class="space-y-4">
-            <input type="text" name="med_name" placeholder="Medicine Name" required
-                class="w-full p-3 border border-gray-300 rounded-md">
-            <input type="time" name="med_time" required class="w-full p-3 border border-gray-300 rounded-md">
-            <input type="email" name="email" placeholder="Your Email" required
-                class="w-full p-3 border border-gray-300 rounded-md">
-            <button type="submit"
-                class="w-full p-3 bg-[#0cb8b6] text-white rounded-md hover:bg-[#17c2a4] transition">Set
-                Reminder</button>
-        </form>
-    </div>
-
-    <!-- Active Reminders -->
-    <div class="mt-12 max-w-md mx-auto p-6 bg-white shadow-lg rounded-lg">
-        <h2 class="text-2xl font-semibold mb-4">📋 Active Reminders:</h2>
-        <ul class="space-y-2">
-            {% for name, time, email in reminders %}
-            <li class="p-3 border-b border-gray-200">
-                <span class="font-semibold">{{ name }}</span> at {{ time }} → {{ email }}
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-
+    <h2>📋 Active Reminders:</h2>
+    <ul>
+        {% for name, time, email in reminders %}
+            <li>{{ name }} at {{ time }} → {{ email }}</li>
+        {% endfor %}
+    </ul>
 </body>
-
 </html>
